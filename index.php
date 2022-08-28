@@ -46,7 +46,7 @@ else{
               <?php $i = 0;
               foreach($posts as $post){
                   $actives = '';
-                  if($i == 0 && $i <= 5){
+                  if($i == 0 && $i < 5){
                     $actives = 'active';
                   }
               ?>
@@ -57,7 +57,7 @@ else{
             <?php $i = 0;
               foreach($posts as $post){
                   $actives = '';
-                  if($i == 0 && $i <= 5){
+                  if($i == 0 && $i < 5){
                     $actives = 'active';
                   }
               

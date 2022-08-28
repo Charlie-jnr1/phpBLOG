@@ -1,12 +1,12 @@
 <?php include("path.php") ?>
-<?php  require_once(ROOT_PATH . "/app/controllers/posts.php"); 
-require_once(ROOT_PATH . "/app/controllers/user.php"); 
+<?php  require_once(ROOT_PATH . "/app/controllers/posts.php");
 
-
-    
+if(isset($_GET['id'])){
+  $post = selectOne('posts', ['id' => $_GET['id']]);
+}
 
 $posts = selectAll('posts', ['published' => 1]);
-dd($post);
+
 ?>
 
 <!DOCTYPE html>

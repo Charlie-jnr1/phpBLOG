@@ -1,6 +1,6 @@
 <?php  require_once('../../path.php'); 
 require_once(ROOT_PATH . "/app/controllers/posts.php");
-
+adminOnly();
 ?>
 
 

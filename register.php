@@ -1,5 +1,7 @@
 <?php include("path.php") ?>
-<?php include(ROOT_PATH . "/app/controllers/user.php");?>
+<?php include(ROOT_PATH . "/app/controllers/user.php");
+guestOnly();
+?>
 
 
 

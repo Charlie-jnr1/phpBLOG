@@ -209,13 +209,3 @@ function getPostsTopicById($topic_id){
     return $records;
 }
 
-function getPosterUsername($user_id, $username){
-    global $conn;
-    $sql= "SELECT p.*, u.username FROM posts AS p JOIN users AS u ON p.user_id=u.id WHERE u.username = '' AND p.user_id=?";
-
-
-    $stmt = executeQuery($sql, ['username'=> $username, 'user_id' => $user_id]);
-    $records= $stmt-> get_result()->fetch_all(MYSQLI_ASSOC);
-    
-    return $records;
-}   

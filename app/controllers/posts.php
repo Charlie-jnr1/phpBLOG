@@ -1,5 +1,6 @@
 <?php
 require_once(ROOT_PATH . '/app/database/db.php');
+require_once(ROOT_PATH . '/app/helpers/Middleware.php');
 require_once(ROOT_PATH . '/app/helpers/validatePosts.php');
 
 $table = 'posts';
@@ -30,6 +31,8 @@ if(isset($_GET['id'])){
 
 
 if(isset($_GET['del_id'])){
+    adminOnly();
+    
     $id = $_GET['del_id'];
     $count = delete($table,$id);
     $_SESSION['message'] = 'Post deleted successfully!';
@@ -39,7 +42,10 @@ if(isset($_GET['del_id'])){
 
 }
 
+
+
 if(isset($_GET['published']) && isset($_GET['p_id'])){
+    adminOnly();
     $published = $_GET['published'];
     $p_id = $_GET['p_id'];
     $count = update($table, $p_id, ['published' => $published]);
@@ -52,8 +58,9 @@ if(isset($_GET['published']) && isset($_GET['p_id'])){
 }
 
 
-if(isset($_POST['add-posts'])){
 
+if(isset($_POST['add-posts'])){
+    adminOnly();
      $errors = validatePosts($_POST);
 
     if(!empty($_FILES['image']['name'])){
@@ -94,7 +101,7 @@ if(isset($_POST['add-posts'])){
     }
 
     if(isset($_POST['update-post'])){
-
+        adminOnly();
         $errors = validatePosts($_POST);
 
        if(!empty($_FILES['image']['name'])){

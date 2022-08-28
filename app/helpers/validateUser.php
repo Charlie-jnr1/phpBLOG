@@ -26,9 +26,9 @@
     // }
     
 
-    $existingUser = selectOne('users', ['Email' => $user['email']]);
-    if($existingTopic){
-        if($user['update-user'] = 1 && $existingUser['Id'] != $user['email']){
+    $existingUser = selectOne('users', ['Email' => $user['Email']]);
+    if($existingUser){
+        if($user['update-user'] = 1 && $existingUser['Id'] != $user['Email']){
             array_push($errors, 'User with email already exists !');
         }
 

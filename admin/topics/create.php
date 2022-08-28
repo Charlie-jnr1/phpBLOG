@@ -1,7 +1,7 @@
 <?php  require_once("../../path.php");
 include(ROOT_PATH . "/app/controllers/topics.php");
 
-
+adminOnly();
 
 ?>
 
