@@ -15,8 +15,6 @@ if(isset($_GET['t_id'])){
 
 else{
   $posts = getPublishedPosts();
-  $pagenatedposts= getPagenatedPosts();
-
   }
 ?>
 
