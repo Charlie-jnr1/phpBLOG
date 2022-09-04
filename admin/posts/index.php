@@ -1,5 +1,6 @@
 <?php  require_once('../../path.php'); 
 require_once(ROOT_PATH . "/app/controllers/posts.php");
+$posts = getPublishedPosts();
 adminOnly();
 ?>
 
@@ -52,7 +53,7 @@ adminOnly();
                             <tr>
                             <td><?php echo $key + 1; ?></td>
                             <td><?php echo $post['title']; ?></td>
-                            <td>Charlie</td>
+                            <td><?php echo $post['username']; ?></td>
                             <td><a href="edit.php?id=<?php echo $post['id']; ?>" class="edit">edit</a></td>
                             <td><a href="index.php?del_id=<?php echo $post['id']; ?>" class="delete">delete</a></td>
                             <?php if($post['published']): ?>

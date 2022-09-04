@@ -18,6 +18,7 @@ $published = '';
 
 
 
+
 if(isset($_GET['id'])){
     $post = selectOne($table, ['id' => $_GET['id']]);
 

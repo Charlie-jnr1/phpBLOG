@@ -179,6 +179,47 @@ function getPublishedPosts(){
     
 
 
+
+
+function getPagenatedPosts($currentPage = 1, $recordsPerPage= 3){
+    global $conn;
+    $sql= "SELECT p.*, u.username
+     FROM posts AS p JOIN
+      users AS u ON p.user_id=u.id 
+      WHERE p.published = 1
+      ORDER BY p.created_at DESC LIMIT ?,?";
+
+      $data = [
+        'offset' => ($currentPage = 1) * $recordsPerPage,
+        'numberOfRecords' => $recordsPerPage,
+      ];
+
+
+    $stmt = executeQuery($sql,$data);
+    $posts= $stmt-> get_result()->fetch_all(MYSQLI_ASSOC);
+    return [
+
+        'posts'=> $posts,
+        'prevPage' => $currentPage > 1 ? $currentPage - 1 : false,
+         ];
+
+
+         if(isset($_GET['page'])){
+            $page = $_GET['page'];
+         }
+
+         else{
+            $page = 1;
+         }
+
+         $pr_query = "SELECT * FROM posts";
+         $pr_result = mysqli_query($pr_query);
+         $total_record = mysqli_num_rows($pr_result,$pr_query);
+         dd($total_record);
+}
+ 
+
+
 function searchPosts($term){
     $match = '%'. $term .'%';
     global $conn;

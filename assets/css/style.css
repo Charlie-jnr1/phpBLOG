@@ -813,3 +813,10 @@ body{
     text-align: center;
 }
 /* end of success message */
+
+
+/* pagenation */
+
+.pagenation{
+    display: inline-block;
+}

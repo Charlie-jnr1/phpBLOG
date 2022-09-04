@@ -3,6 +3,7 @@
 require_once (ROOT_PATH . "/app/controllers/topics.php");
 $posts= array();
 $postTitle='Recent Posts';
+
 if(isset($_GET['t_id'])){
   $posts= getPostsTopicById($_GET['t_id']);
   $postTitle =" Posts under  '"  . $_GET['name'] . "'";
@@ -14,8 +15,9 @@ if(isset($_GET['t_id'])){
 
 else{
   $posts = getPublishedPosts();
+  $pagenatedposts= getPagenatedPosts();
 
-}
+  }
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +48,7 @@ else{
               <?php $i = 0;
               foreach($posts as $post){
                   $actives = '';
-                  if($i == 0 && $i < 5){
+                  if($i == 0){
                     $actives = 'active';
                   }
               ?>
@@ -96,7 +98,7 @@ else{
     <div class="two-sections">
     <div class="post1">
       <div class="recent-post"><h4><?php echo $postTitle; ?></h4></div>
-      <?php foreach($posts as $post): ?>
+      <?php foreach($pagenatedposts['posts'] as $post): ?>
       <div class="post-item">
         <div class="post-img">
           <img src="<?php echo BASE_URL . "/assets/images/" . $post['image'];  ?>" alt="">
