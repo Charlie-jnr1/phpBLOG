@@ -2,7 +2,7 @@
 
 include_once(ROOT_PATH . '/app/database/db.php');
 require_once(ROOT_PATH . '/app/helpers/Middleware.php');
-include (ROOT_PATH . "/app/helpers/validateUser.php");
+include_once(ROOT_PATH . "/app/helpers/validateUser.php");
 
 $errors = array();
 $table = 'users';

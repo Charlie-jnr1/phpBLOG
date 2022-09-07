@@ -1,7 +1,7 @@
 <?php
 ini_set('error_reporting', E_ALL);
 session_start();
-require ('connect.php');
+require_once('connect.php');
 
 
 function dd($value){

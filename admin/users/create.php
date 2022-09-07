@@ -1,5 +1,5 @@
 <?php  require_once("../../path.php"); 
-include(ROOT_PATH . "/app/controllers/user.php");
+include_once(ROOT_PATH . "/app/controllers/user.php");
 adminOnly();
 ?>
 <!DOCTYPE html>

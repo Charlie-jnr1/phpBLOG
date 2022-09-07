@@ -1,4 +1,4 @@
-<?php include("path.php") ?>
+<?php include_once("path.php") ?>
 <?php  require_once(ROOT_PATH . "/app/controllers/posts.php");
 
 if(isset($_GET['id'])){
