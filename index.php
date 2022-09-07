@@ -96,7 +96,7 @@ else{
     <div class="two-sections">
     <div class="post1">
       <div class="recent-post"><h4><?php echo $postTitle; ?></h4></div>
-      <?php foreach($pagenatedposts['posts'] as $post): ?>
+      <?php foreach($posts as $post): ?>
       <div class="post-item">
         <div class="post-img">
           <img src="<?php echo BASE_URL . "/assets/images/" . $post['image'];  ?>" alt="">
