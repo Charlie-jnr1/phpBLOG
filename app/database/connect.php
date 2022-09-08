@@ -2,12 +2,12 @@
 
 
 
-$MYSQLDATABASE=railway;
-$MYSQLHOST=containers-us-west-52.railway.app;
-$MYSQLPASSWORD=Wf2ovFYyTONRMIhV6LJJ;
+$MYSQLDATABASE= "railway";
+$MYSQLHOST="containers-us-west-52.railway.app";
+$MYSQLPASSWORD="Wf2ovFYyTONRMIhV6LJJ";
 $MYSQLPORT =7478;
-$MYSQLUSER=root;
-$MYSQL_URL=mysql://${{ MYSQLUSER }}:${{ MYSQLPASSWORD }}@${{ MYSQLHOST }}:${{ MYSQLPORT }}/${{ MYSQLDATABASE }} ;
+$MYSQLUSER="root";
+$MYSQL_URL="mysql://${{ MYSQLUSER }}:${{ MYSQLPASSWORD }}@${{ MYSQLHOST }}:${{ MYSQLPORT }}/${{ MYSQLDATABASE }}" ;
 
 
 
