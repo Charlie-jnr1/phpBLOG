@@ -2,7 +2,7 @@
 
 
 
-$MYSQLDATABASE= "railway";
+$MYSQLDATABASE= "users";
 $MYSQLHOST="containers-us-west-52.railway.app";
 $MYSQLPASSWORD="Wf2ovFYyTONRMIhV6LJJ";
 $MYSQLPORT =7478;
