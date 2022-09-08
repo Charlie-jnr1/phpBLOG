@@ -5,7 +5,7 @@
 $MYSQLDATABASE= "users";
 $MYSQLHOST="containers-us-west-52.railway.app";
 $MYSQLPASSWORD="Wf2ovFYyTONRMIhV6LJJ";
-$MYSQLPORT =7478;
+$MYSQLPORT =7220;
 $MYSQLUSER="root";
 $MYSQL_URL="mysql://${{ MYSQLUSER }}:${{ MYSQLPASSWORD }}@${{ MYSQLHOST }}:${{ MYSQLPORT }}/${{ MYSQLDATABASE }}" ;
 
