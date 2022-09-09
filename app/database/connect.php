@@ -7,7 +7,7 @@ $MYSQLHOST="containers-us-west-52.railway.app";
 $MYSQLPASSWORD="Wf2ovFYyTONRMIhV6LJJ";
 $MYSQLPORT =7220;
 $MYSQLUSER="root";
-$conn= "mysql:root:Wf2ovFYyTONRMIhV6LJJ@containers-us-west-52.railway.app:7478/railway";
+$conn= "mysql://root:Wf2ovFYyTONRMIhV6LJJ@containers-us-west-52.railway.app:7478/railway";
 mysql://root:Wf2ovFYyTONRMIhV6LJJ@containers-us-west-52.railway.app:7478/railway
 
 
